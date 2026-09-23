@@ -1,1 +1,284 @@
 @import url('bootstrap');
+
+:root {
+    --bg: #0E0B16;
+    --surface: #171225;
+    --surface-2: #1F1930;
+    --text: #EAE6F4;
+    --text-muted: #9C93B5;
+    --accent: #9B8CFF;
+    --accent-soft: #241D3D;
+    --border: #2A2340;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+h1,
+h2,
+h3,
+.brand {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f4cd72;
+}
+
+/* #region HEADER */
+
+.site-header {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 20;
+    background: rgba(11, 14, 20, .85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--text);
+}
+
+.nav-link {
+    color: var(--text-muted) !important;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--text) !important;
+}
+
+/* #endregion HEADER */
+
+
+
+/* #region HeroSpace */
+
+.hero {
+    padding: 7rem 0 6rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.hero .eyebrow {
+    color: var(--accent);
+    font-family: monospace;
+    font-size: .95rem;
+}
+
+.hero h1 {
+    font-size: clamp(2.1rem, 5vw, 3.4rem);
+    line-height: 1.15;
+    font-weight: 600;
+    max-width: 16ch;
+}
+
+.hero p.lead {
+    color: var(--text-muted);
+    max-width: 52ch;
+    font-size: 1.1rem;
+}
+
+.btn-accent {
+    background: var(--accent);
+    color: #1a1406;
+    font-weight: 600;
+    border: none;
+}
+
+.btn-accent:hover {
+    background: #f4cd72;
+    color: #1a1406;
+}
+
+.btn-outline-accent {
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+
+.btn-outline-accent:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* #endregion HeroSpace */
+
+/* SECTION?? */
+
+.section-title {
+    font-size: 1.9rem;
+    font-weight: 600;
+    margin-bottom: .4rem;
+}
+
+.section-sub {
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 60ch;
+}
+
+.border-top-section {
+    border-top: 1px solid var(--border);
+}
+
+
+
+/* #region Project cards */
+
+.project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-thumb {
+    aspect-ratio: 16/9;
+    background: var(--surface-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-family: monospace;
+    font-size: .85rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.project-card .card-body {
+    padding: 1.3rem 1.4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.project-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: .5rem;
+}
+
+.project-card p.desc {
+    color: var(--text-muted);
+    font-size: .95rem;
+    flex: 1;
+}
+
+.stack-tag {
+    display: inline-block;
+    font-size: .75rem;
+    font-family: monospace;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: .2rem .55rem;
+    border-radius: 5px;
+    margin: .15rem .3rem .15rem 0;
+}
+
+.project-links a {
+    font-size: .9rem;
+    font-weight: 500;
+    margin-right: 1.2rem;
+}
+
+/* #endregion Project cards */
+
+
+/* #region Skills */
+.skill-group h3 {
+    font-size: .85rem;
+    letter-spacing: .03em;
+    color: var(--text-muted);
+    text-transform: none;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: .6rem;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-list li {
+    padding: .45rem 0;
+    border-bottom: 1px dashed var(--border);
+    font-size: .98rem;
+    color: var(--text);
+}
+
+.skill-list li:last-child {
+    border-bottom: none;
+}
+
+/* #endregion Skills */
+
+
+
+/* #region About */
+.about-photo {
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-family: monospace;
+}
+
+.about-text p {
+    color: var(--text-muted);
+    font-size: 1.02rem;
+    line-height: 1.7;
+}
+
+/* #endregion About */
+
+/* #region Contact */
+.contact-links a {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    padding: 1rem 1.2rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-weight: 500;
+    transition: border-color .15s;
+}
+
+.contact-links a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* #endregion Contact */
+
+
+/* #region Footer */
+footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 0;
+    color: var(--text-muted);
+    font-size: .9rem;
+}
+
+/* #endregion Footer */
