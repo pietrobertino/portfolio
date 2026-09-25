@@ -1,3 +1,5 @@
+import skills from "../data/skills"
+
 export default function SkillsSection() {
 
     return (
@@ -9,28 +11,25 @@ export default function SkillsSection() {
                     <div className="col-md-4 skill-group">
                         <h3>Frontend</h3>
                         <ul className="skill-list">
-                            <li>React</li>
-                            <li>JavaScript</li>
-                            <li>Bootstrap / CSS</li>
-                            <li>HTML</li>
+                            {skills.frontend.map(skill => (
+                                <li key={skill}>{skill}</li>
+                            ))}
                         </ul>
                     </div>
                     <div className="col-md-4 skill-group">
                         <h3>Backend</h3>
                         <ul className="skill-list">
-                            <li></li>
-                            <li>Node.js / Express.js</li>
-                            <li>MySQL </li>
-                            <li>API REST</li>
+                            {skills.backend.map(skill => (
+                                <li key={skill}>{skill}</li>
+                            ))}
                         </ul>
                     </div>
                     <div className="col-md-4 skill-group">
                         <h3>DevOps / Tools</h3>
                         <ul className="skill-list">
-                            <li>Git / GitHub</li>
-                            <li>Docker</li>
-                            <li>Linux (server)</li>
-                            <li>CI/CD di base</li>
+                            {skills.tools.map(skill => (
+                                <li key={skill}>{skill}</li>
+                            ))}
                         </ul>
                     </div>
                 </div>
