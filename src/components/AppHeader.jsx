@@ -4,7 +4,7 @@ export default function AppHeader() {
         <header className='site-header'>
             <nav className="navbar navbar-expand-md py-3">
                 <div className="container">
-                    <a className="brand navbar-brand" href="#">Pietro Bertino</a>
+                    <span className="brand navbar-brand" href="#">Pietro Bertino</span>
                     <button className="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                         <span className="navbar-toggler-icon"></span>
                     </button>

@@ -1,4 +1,5 @@
 import ProjectCard from "./ProjectCard"
+import projects from "../data/projects"
 
 export default function ProjectsSection() {
 
@@ -9,9 +10,13 @@ export default function ProjectsSection() {
                 <p className="section-sub">Una selezione di lavori recenti, con il problema affrontato e lo stack usato.</p>
                 <div className="row g-4">
 
-                    <div className="col-md-6 col-lg-4">
-                        <ProjectCard />
-                    </div>
+                    {projects.map(project => (
+                        <div className="col-md-6 col-lg-4" key={project.id}>
+                            <ProjectCard projectObj={project} />
+                        </div>
+                    )
+
+                    )}
 
                 </div>
             </div>
