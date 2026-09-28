@@ -8,7 +8,7 @@ export default function ProjectsSection() {
             <div className="container">
                 <h2 className="section-title">Progetti</h2>
                 <p className="section-sub">Una selezione dei miei lavori recenti.</p>
-                <div class="projects-track" tabindex="0" aria-label="Elenco progetti">
+                <div className="projects-track" tabIndex="0" aria-label="Elenco progetti">
 
                     {projects.map(project => (
                         <div className="project-item" key={project.id}>

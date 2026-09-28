@@ -10,7 +10,7 @@ export default function HomePage() {
     return (
         <>
             <AppHeader />
-            <div class="page-scroll">
+            <div className="page-scroll">
                 <main>
                     <HeroSpace />
                     <ProjectsSection />
