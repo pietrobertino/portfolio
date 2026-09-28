@@ -10,14 +10,16 @@ export default function HomePage() {
     return (
         <>
             <AppHeader />
-            <main>
-                <HeroSpace />
-                <ProjectsSection />
-                <SkillsSection />
-                <AboutSection />
-                <ContactsSection />
-            </main>
-            <AppFooter />
+            <div class="page-scroll">
+                <main>
+                    <HeroSpace />
+                    <ProjectsSection />
+                    <SkillsSection />
+                    <AboutSection />
+                    <ContactsSection />
+                </main>
+                <AppFooter />
+            </div>
         </>
     )
 }

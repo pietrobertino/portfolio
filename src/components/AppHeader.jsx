@@ -1,11 +1,14 @@
+import { useState } from "react"
+
 export default function AppHeader() {
 
     return (
         <header className='site-header'>
             <nav className="navbar navbar-expand-md py-3">
                 <div className="container">
-                    <span className="brand navbar-brand" href="#">Pietro Bertino</span>
-                    <button className="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                    <a className="brand navbar-brand" href="#hero">Pietro Bertino</a>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu"
+                        aria-expanded="false" aria-label="Apri il menu">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse justify-content-end" id="navMenu">

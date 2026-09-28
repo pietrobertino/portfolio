@@ -9,6 +9,7 @@
     --accent: #9B8CFF;
     --accent-soft: #241D3D;
     --border: #2A2340;
+    --hover: #f4cd72;
 }
 
 body {
@@ -32,18 +33,41 @@ a {
 }
 
 a:hover {
-    color: #f4cd72;
+    color: var(--hover);
 }
 
 /* #region HEADER */
 
 .site-header {
-    position: sticky;
-    top: env(safe-area-inset-top, 0px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 72px;
+    display: flex;
+    align-items: center;
     z-index: 20;
     background: rgba(11, 14, 20, .85);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
+}
+
+.site-header .navbar {
+    width: 100%;
+}
+
+@media (max-width:767.98px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 1.5rem;
+        max-height: calc(100vh - 72px);
+        overflow-y: auto;
+    }
 }
 
 .brand {
@@ -52,13 +76,83 @@ a:hover {
     color: var(--text);
 }
 
+.brand:hover {
+    color: var(--accent);
+}
+
 .nav-link {
     color: var(--text-muted) !important;
     font-weight: 500;
 }
 
 .nav-link:hover {
-    color: var(--text) !important;
+    color: var(--hover) !important;
+}
+
+/* Hamburger */
+.navbar-toggler {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: border-color .2s;
+}
+
+.navbar-toggler:hover {
+    border-color: var(--accent);
+}
+
+.navbar-toggler:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.navbar-toggler-icon {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: linear-gradient(var(--accent), var(--accent)) right / 14px 2px no-repeat;
+    transition: background-size .2s;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--text);
+    transition: top .25s, transform .25s;
+}
+
+.navbar-toggler-icon::before {
+    top: -7px;
+}
+
+.navbar-toggler-icon::after {
+    top: 7px;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-size: 0 2px;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    top: 0;
+    transform: rotate(-45deg);
 }
 
 /* #endregion HEADER */
@@ -202,6 +296,55 @@ a:hover {
     margin-right: 1.2rem;
 }
 
+.projects-track {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--surface);
+}
+
+.project-item {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+}
+
+@media (min-width:768px) {
+    .project-item {
+        flex-basis: calc((100% - 1.5rem) / 2);
+    }
+}
+
+@media (min-width:992px) {
+    .project-item {
+        flex-basis: calc((100% - 3rem) / 3);
+    }
+}
+
+.projects-track::-webkit-scrollbar {
+    height: 8px;
+}
+
+.projects-track::-webkit-scrollbar-track {
+    background: var(--surface);
+    border-radius: 10px;
+}
+
+.projects-track::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+    border-radius: 10px;
+}
+
+.projects-track:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
 /* #endregion Project cards */
 
 
@@ -249,6 +392,17 @@ a:hover {
     justify-content: center;
     color: var(--text-muted);
     font-family: monospace;
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    /* regola in base al layout, evita che diventi enorme su schermi larghi */
+}
+
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .about-text p {
@@ -260,10 +414,18 @@ a:hover {
 /* #endregion About */
 
 /* #region Contact */
+.contact-links {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+}
+
 .contact-links a {
     display: flex;
     align-items: center;
     gap: .6rem;
+    min-width: 0;
+    overflow-wrap: anywhere;
     padding: 1rem 1.2rem;
     background: var(--surface);
     border: 1px solid var(--border);
@@ -290,3 +452,46 @@ footer {
 }
 
 /* #endregion Footer */
+
+/* #region Scrollbar */
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+.page-scroll {
+    margin-top: 72px;
+    height: calc(100vh - 72px - env(safe-area-inset-top, 0px));
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--surface);
+}
+
+.page-scroll::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.page-scroll::-webkit-scrollbar-track {
+    background: var(--surface);
+}
+
+.page-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--accent), var(--accent-soft));
+    border-radius: 10px;
+    border: 2px solid var(--surface);
+}
+
+.page-scroll::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #b1a5ff, var(--accent));
+}
+
+.page-scroll::-webkit-scrollbar-corner {
+    background: var(--surface);
+}
+
+/* #endregion Scrollbar */
