@@ -12,7 +12,7 @@ const projects = [
         link_demo: 'https://booldog.vercel.app/'
     },
     {
-        id: 1,
+        id: 2,
         img: 'movie-db-screenshot.png',
         title: 'Movie Database',
         description: {
