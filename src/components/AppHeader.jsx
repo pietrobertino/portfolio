@@ -1,4 +1,10 @@
+import { useLanguage } from "../contexts/LanguageContext"
+
 export default function AppHeader() {
+
+    const { t } = useLanguage()
+    const text = t.header;
+
 
     return (
         <header className='site-header'>
@@ -11,10 +17,10 @@ export default function AppHeader() {
                     </button>
                     <div className="collapse navbar-collapse justify-content-end" id="navMenu">
                         <ul className="navbar-nav gap-md-4">
-                            <li className="nav-item"><a className="nav-link" href="#progetti">Progetti</a></li>
-                            <li className="nav-item"><a className="nav-link" href="#competenze">Competenze</a></li>
-                            <li className="nav-item"><a className="nav-link" href="#chi-sono">Chi sono</a></li>
-                            <li className="nav-item"><a className="nav-link" href="#contatti">Contatti</a></li>
+                            <li className="nav-item"><a className="nav-link" href="#progetti">{text.projects}</a></li>
+                            <li className="nav-item"><a className="nav-link" href="#competenze">{text.skills}</a></li>
+                            <li className="nav-item"><a className="nav-link" href="#chi-sono">{text.about}</a></li>
+                            <li className="nav-item"><a className="nav-link" href="#contatti">{text.contact}</a></li>
                         </ul>
                     </div>
                 </div>

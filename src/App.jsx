@@ -1,11 +1,18 @@
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import HomePage from "./pages/HomePage"
+import { LanguageContextProvider } from "./contexts/LanguageContext"
 
 function App() {
 
   return (
-    <>
-      <HomePage />
-    </>
+    <LanguageContextProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/:lang" element={<HomePage />} />
+          <Route index element={<Navigate to='/it' replace />} />
+        </Routes>
+      </BrowserRouter>
+    </LanguageContextProvider>
   )
 }
 
