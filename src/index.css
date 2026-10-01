@@ -89,6 +89,43 @@ a:hover {
     color: var(--hover) !important;
 }
 
+.lang-switch {
+    display: inline-flex;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 3px;
+    gap: 2px;
+}
+
+.lang-btn {
+    border: 0;
+    background: none;
+    color: var(--text-muted);
+    font-family: monospace;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .03em;
+    padding: .3rem .75rem;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background .15s, color .15s;
+}
+
+.lang-btn.active {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+.lang-btn:not(.active):hover {
+    color: var(--text);
+}
+
+.lang-btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
 /* Hamburger */
 .navbar-toggler {
     width: 44px;

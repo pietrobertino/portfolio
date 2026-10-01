@@ -1,4 +1,5 @@
 import { useLanguage } from "../contexts/LanguageContext"
+import LanguageToggle from "./LanguageToggle";
 
 export default function AppHeader() {
 
@@ -21,6 +22,7 @@ export default function AppHeader() {
                             <li className="nav-item"><a className="nav-link" href="#competenze">{text.skills}</a></li>
                             <li className="nav-item"><a className="nav-link" href="#chi-sono">{text.about}</a></li>
                             <li className="nav-item"><a className="nav-link" href="#contatti">{text.contact}</a></li>
+                            <li className="nav-item mt-3 mt-md-0 ms-md-2"><LanguageToggle /></li>
                         </ul>
                     </div>
                 </div>
