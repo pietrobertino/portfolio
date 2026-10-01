@@ -19,7 +19,7 @@ export default function ProjectCard({ projectObj }) {
                 </div>
                 <div className="project-links">
                     <a href={projectObj.link_github} target="_blank" rel="noopener">GitHub →</a>
-                    <a href={projectObj.link_demo} target="_blank" rel="noopener">Demo live →</a>
+                    {projectObj.link_demo && <a href={projectObj.link_demo} target="_blank" rel="noopener">Demo live →</a>}
                 </div>
             </div>
         </div>

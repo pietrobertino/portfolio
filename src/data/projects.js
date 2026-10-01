@@ -21,7 +21,7 @@ const projects = [
         },
         stack: ['React', 'Express.js', 'MySQL', 'Bootstrap', 'CSS'],
         link_github: 'https://github.com/pietrobertino/movie-database/tree/main',
-        link_demo: 'https://movie-database-nine-lake.vercel.app/'
+        link_demo: ''
     }
 ];
 
