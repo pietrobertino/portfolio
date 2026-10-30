@@ -1,19 +1,29 @@
 import { useLanguage } from "../contexts/LanguageContext"
+import { usePage } from "../contexts/PageContext";
 import LanguageToggle from "./LanguageToggle";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function AppHeader() {
 
-    const { t, lang } = useLanguage()
+    const { t, lang } = useLanguage();
     const text = t.header;
+
+    const { homePage } = usePage();
+    const navigate = useNavigate();
 
     const handleScroll = (e, id) => {
         e.preventDefault();
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+
+        if (homePage) {
+            // Se sei già in Home, scrolla direttamente
+            const element = document.getElementById(id);
+            if (element) element.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            // Se sei su un'altra pagina, naviga in Home passandoti l'ID dietro le quinte
+            navigate(`/${lang}`, { state: { scrollToId: id } });
         }
     };
+
 
 
     return (
