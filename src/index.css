@@ -199,6 +199,21 @@ a:hover {
 /* #region HeroSpace */
 
 .hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.hero .container {
+    position: relative;
+}
+
+.hero {
     padding: 7rem 0 6rem;
     border-bottom: 1px solid var(--border);
 }
@@ -264,9 +279,214 @@ a:hover {
     border-top: 1px solid var(--border);
 }
 
+/* Servizi */
+.services-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+.service-card {
+    position: relative;
+    transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    z-index: 2;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    transform: scaleX(0);
+    transition: transform .45s ease;
+}
+
+.service-card .project-thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card .project-thumb video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: saturate(.6) brightness(.75);
+    transition: transform .6s ease, filter .4s ease;
+}
+
+.service-card .project-thumb::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(to top, var(--surface), transparent 55%);
+    transition: opacity .4s ease;
+}
+
+.service-card h3 {
+    transition: color .3s ease;
+}
+
+@media (hover:hover) {
+    .service-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--accent);
+        box-shadow: 0 18px 40px -16px rgba(155, 140, 255, .45);
+    }
+
+    .service-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .service-card:hover .project-thumb video {
+        transform: scale(1.06);
+        filter: none;
+    }
+
+    .service-card:hover .project-thumb::after {
+        opacity: .35;
+    }
+
+    .service-card:hover h3 {
+        color: var(--accent);
+    }
+}
+
+@media (prefers-reduced-motion:reduce) {
+
+    .service-card,
+    .service-card::before,
+    .service-card .project-thumb video {
+        transition: none;
+    }
+
+    .service-card:hover {
+        transform: none;
+    }
+
+    .service-card:hover .project-thumb video {
+        transform: none;
+    }
+}
+
+.hero {
+    border-bottom: 0;
+}
+
+/* togli il border-bottom che avevi nella regola .hero */
+section+section {
+    border-top: 1px solid var(--border);
+}
 
 
 /* #region Project cards */
+
+/* Progetti */
+.projects-track {
+    padding: 12px 8px 24px;
+    margin: -12px -8px 0;
+    scroll-padding-inline: 8px;
+}
+
+.project-item .project-card {
+    position: relative;
+    transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+}
+
+.project-item .project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    z-index: 2;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    transform: scaleX(0);
+    transition: transform .45s ease;
+}
+
+.project-item .project-thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-item .project-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: saturate(.6) brightness(.75);
+    transition: transform .6s ease, filter .4s ease;
+}
+
+.project-item .project-thumb::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(to top, var(--surface), transparent 55%);
+    transition: opacity .4s ease;
+}
+
+.project-item h3 {
+    transition: color .3s ease;
+}
+
+.project-links a {
+    display: inline-block;
+    transition: transform .2s ease;
+}
+
+@media (hover:hover) {
+    .project-item .project-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--accent);
+        box-shadow: 0 18px 40px -16px rgba(155, 140, 255, .45);
+    }
+
+    .project-item .project-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .project-item .project-card:hover .project-thumb img {
+        transform: scale(1.06);
+        filter: none;
+    }
+
+    .project-item .project-card:hover .project-thumb::after {
+        opacity: .35;
+    }
+
+    .project-item .project-card:hover h3 {
+        color: var(--accent);
+    }
+
+    .project-links a:hover {
+        transform: translateX(3px);
+    }
+}
+
+@media (prefers-reduced-motion:reduce) {
+
+    .project-item .project-card,
+    .project-item .project-card::before,
+    .project-item .project-thumb img {
+        transition: none;
+    }
+
+    .project-item .project-card:hover {
+        transform: none;
+    }
+
+    .project-item .project-card:hover .project-thumb img {
+        transform: none;
+    }
+}
 
 .project-card {
     background: var(--surface);

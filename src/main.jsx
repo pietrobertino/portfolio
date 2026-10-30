@@ -5,9 +5,11 @@ import App from './App.jsx'
 import * as bootstrap from 'bootstrap'
 import '@fontsource/space-grotesk'
 import '@fontsource/inter'
+import { MotionConfig } from 'framer-motion';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+
+  <MotionConfig reducedMotion="user">
     <App />
-  </StrictMode>,
+  </MotionConfig>,
 )

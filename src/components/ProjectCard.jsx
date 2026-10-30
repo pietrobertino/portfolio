@@ -12,11 +12,11 @@ export default function ProjectCard({ projectObj }) {
             <div className="card-body">
                 <h3>{projectObj.title}</h3>
                 <p className="desc">{projectObj.description[lang]}</p>
-                <div className="mb-3">
+                {/* <div className="mb-3">
                     {projectObj.stack.map(stack => (
                         <span className="stack-tag" key={stack}>{stack}</span>
                     ))}
-                </div>
+                </div> */}
                 <div className="project-links">
                     <a href={projectObj.link_github} target="_blank" rel="noopener">GitHub →</a>
                     {projectObj.link_demo && <a href={projectObj.link_demo} target="_blank" rel="noopener">Demo live →</a>}

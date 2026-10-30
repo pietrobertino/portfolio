@@ -2,23 +2,23 @@ const texts = {
     it: {
         header: {
             projects: 'Progetti',
-            skills: 'Competenze',
-            about: 'Chi sono',
-            contact: 'Contatti'
+            services: 'Servizi',
+            contact: 'Contatti',
+            about: 'Su di me'
         },
         hero: {
             text1: 'Ciao, sono Pietro.',
-            text2: 'Full Stack Developer specializzato in React ed Express.',
-            btn1: 'Guarda i progetti',
-            btn2: 'Contattami',
+            text2: 'Realizzo siti e web app che portano clienti al tuo business.',
+            btn1: 'Richiedi un preventivo',
+            btn2: 'Guarda i lavori',
         },
         projects: {
             title: 'Progetti',
             subtitle: 'Una selezione dei miei lavori recenti.'
         },
-        skills: {
-            title: 'Competenze tecniche',
-            subtitle: 'Strumenti e linguaggi che uso concretamente nel lavoro quotidiano.'
+        services: {
+            title: 'Servizi offerti',
+            subtitle: 'Di che tipo di sito web hai bisogno?'
         },
         about: {
             title: 'Chi sono',
@@ -52,7 +52,7 @@ const texts = {
             title: 'Projects',
             subtitle: 'A selection of my recent work.'
         },
-        skills: {
+        services: {
             title: 'Technical skills',
             subtitle: 'Tools and languages I use hands-on in my day-to-day work.'
         },
