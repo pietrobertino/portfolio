@@ -16,7 +16,7 @@ const item = {
 export default function HeroSpace() {
 
     const { t } = useLanguage();
-    const text = t.hero;
+    const text = t.home.hero;
 
     const ref = useRef(null);
     const reduce = useReducedMotion();
@@ -48,7 +48,7 @@ export default function HeroSpace() {
             <motion.div className="container" variants={container} initial="hidden" animate="show">
                 <motion.div className="eyebrow mb-3" variants={item}>&lt;AboutMe /&gt;</motion.div>
                 <motion.h1 className="mb-3" variants={item}>{text.text1}<br />{text.text2}</motion.h1>
-                <motion.p className="lead mb-4" variants={item}>Il tuo testo</motion.p>
+                <motion.p className="lead mb-4" variants={item}>{text.text3}</motion.p>
                 <motion.div className="d-flex gap-3 flex-wrap" variants={item}>
                     <a href="#progetti" className="btn btn-accent px-4 py-2">{text.btn1}</a>
                     <a href="#contatti" className="btn btn-outline-accent px-4 py-2">{text.btn2}</a>

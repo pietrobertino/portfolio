@@ -3,74 +3,88 @@ const texts = {
         header: {
             projects: 'Progetti',
             services: 'Servizi',
+            workflow: 'Come lavoro',
             contact: 'Contatti',
             about: 'Su di me'
         },
-        hero: {
-            text1: 'Ciao, sono Pietro.',
-            text2: 'Realizzo siti e web app che portano clienti al tuo business.',
-            btn1: 'Richiedi un preventivo',
-            btn2: 'Guarda i lavori',
-        },
-        projects: {
-            title: 'Progetti',
-            subtitle: 'Una selezione dei miei lavori recenti.'
-        },
-        services: {
-            title: 'Servizi offerti',
-            subtitle: 'Di che tipo di sito web hai bisogno?'
-        },
-        about: {
-            title: 'Chi sono',
-            p1: "Dopo essermi affacciato al mondo della programmazione all'università, ho realizzato che il codice è ciò per cui sono portato e che è in grado di darmi soddisfazione, così ho deciso di renderlo il mio mestiere.",
-            p2: "Scrivo codice ponendo attenzione alla leggibilità e alla chiarezza, lo gestisco in modo organizzato. In team mi piace suddividere il lavoro in modo preciso e collaborare su parti condivise.",
-            btn1: 'Visualizza CV (PDF)',
-            btn2: 'Scarica CV (PDF)'
-        },
-        contact: {
-            title: 'Contatti',
-            subtitle: 'Il modo più veloce per raggiungermi.'
+        home: {
+            hero: {
+                text1: 'Ciao, sono Pietro.',
+                text2: 'Realizzo siti e web app che portano clienti al tuo business.',
+                text3: '',
+                btn1: 'Guarda i lavori',
+                btn2: 'Mettitiamoci in contatto',
+            },
+            projects: {
+                title: 'Progetti',
+                subtitle: 'Una selezione dei miei lavori recenti.'
+            },
+            services: {
+                title: 'Servizi offerti',
+                subtitle: 'Di che tipo di sito web hai bisogno?'
+            },
+            contact: {
+                title: 'Contattami',
+                subtitle: 'Parliamo di ciò di cui hai bisogno.'
+            }
         },
         footer: {
             stack: 'Costruito con React'
+        },
+        about: {
+            title: 'Su di me',
+            intro: {
+                p: "Sono Pietro, sviluppatore web freelance di Torino.Lavoro con clienti locali e da remoto in tutto il mondo, trasformando idee in siti web funzionali, curati e pensati per le persone che li utilizzeranno. Ho un livello C2 di inglese, che mi permette di lavorare senza problemi anche con clienti internazionali.Sono particolarmente interessato allo sviluppo e alla qualità del codice, ma non trascuro l'aspetto visivo: credo che un buon sito debba essere tanto piacevole da navigare quanto solido dal punto di vista tecnico. Essendo parte della generazione digitale, conosco da vicino le abitudini e le aspettative del pubblico più giovane.Questo mi permette di sviluppare esperienze web moderne, intuitive e capaci di parlare davvero a chi le utilizza. In poche parole, mi piace costruire cose che funzionano bene, hanno un bell'aspetto e non fanno venire voglia di chiudere la pagina dopo tre secondi."
+            },
+            path: {
+                title: '',
+                p: ''
+            }
         }
     },
     en: {
         header: {
-            projects: 'Projects',
-            skills: 'Skills',
-            about: 'About',
-            contact: 'Contact'
+            projects: 'Progetti',
+            services: 'Servizi',
+            workflow: 'Come lavoro',
+            contact: 'Contatti',
+            about: 'Su di me'
         },
-        hero: {
-            text1: "Hi, I'm Pietro.",
-            text2: 'Full Stack Developer specializing in React and Express.',
-            btn1: 'View projects',
-            btn2: 'Contact me',
-        },
-        projects: {
-            title: 'Projects',
-            subtitle: 'A selection of my recent work.'
-        },
-        services: {
-            title: 'Technical skills',
-            subtitle: 'Tools and languages I use hands-on in my day-to-day work.'
-        },
-        about: {
-            title: 'About me',
-            p1: "After being introduced to programming at university, I realized that code is what I'm naturally suited for and what I find truly rewarding, so I decided to make it my profession.",
-            p2: "I write code with a focus on readability and clarity, and I keep it well organized. In a team, I like to divide the work precisely and collaborate on shared parts.",
-            btn1: 'View CV (PDF)',
-            btn2: 'Download CV (PDF)'
-        },
-        contact: {
-            title: 'Contact',
-            subtitle: 'The fastest way to reach me.'
+        home: {
+            hero: {
+                text1: 'Ciao, sono Pietro.',
+                text2: 'Realizzo siti e web app che portano clienti al tuo business.',
+                text3: '',
+                btn1: 'Guarda i lavori',
+                btn2: 'Mettitiamoci in contatto',
+            },
+            projects: {
+                title: 'Progetti',
+                subtitle: 'Una selezione dei miei lavori recenti.'
+            },
+            services: {
+                title: 'Servizi offerti',
+                subtitle: 'Di che tipo di sito web hai bisogno?'
+            },
+            contact: {
+                title: 'Contattami',
+                subtitle: 'Parliamo di ciò di cui hai bisogno.'
+            }
         },
         footer: {
-            stack: 'Built with React'
+            stack: 'Costruito con React'
+        },
+        about: {
+            title: 'Su di me',
+            intro: {
+                p: "Sono Pietro, sviluppatore web freelance di Torino.Lavoro con clienti locali e da remoto in tutto il mondo, trasformando idee in siti web funzionali, curati e pensati per le persone che li utilizzeranno. Ho un livello C2 di inglese, che mi permette di lavorare senza problemi anche con clienti internazionali.Sono particolarmente interessato allo sviluppo e alla qualità del codice, ma non trascuro l'aspetto visivo: credo che un buon sito debba essere tanto piacevole da navigare quanto solido dal punto di vista tecnico. Essendo parte della generazione digitale, conosco da vicino le abitudini e le aspettative del pubblico più giovane.Questo mi permette di sviluppare esperienze web moderne, intuitive e capaci di parlare davvero a chi le utilizza. In poche parole, mi piace costruire cose che funzionano bene, hanno un bell'aspetto e non fanno venire voglia di chiudere la pagina dopo tre secondi."
+            },
+            path: {
+                title: '',
+                p: ''
+            }
         }
-    }
+    },
 }
 
 export default texts;

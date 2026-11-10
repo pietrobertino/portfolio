@@ -1,4 +1,3 @@
-import skills from "../data/skills"
 import services from "../data/services";
 import { useLanguage } from "../contexts/LanguageContext"
 import ServiceCard from "./ServiceCard";
@@ -7,7 +6,7 @@ import Reveal from "./Reveal";
 export default function ServicesSection() {
 
     const { t, lang } = useLanguage();
-    const text = t.services;
+    const text = t.home.services;
 
 
     return (
@@ -22,18 +21,18 @@ export default function ServicesSection() {
                         </Reveal>
                     ))}
                 </div>
-
                 <div>
-                    <h5 className=" pt-5">Le tecnologie che uso: </h5>
-                    {skills.map(skill => (
-                        <span key={skill}>{skill} </span>
-                    ))}
+                    <h4>Non solo un bel sito</h4>
+                    <ul>
+                        <li>Responsive: funziona bene su smartphone, tablet e desktop.</li>
+
+                        <li>Performance: siti veloci, senza caricamenti eterni.</li>
+
+                        <li>Usabilità: navigazione intuitiva, senza labirinti digitali.</li>
+
+                        <li>Codice: soluzioni curate, organizzate e facili da mantenere.</li>
+                    </ul>
                 </div>
-
-
-
-
-
             </div>
         </section>
     )

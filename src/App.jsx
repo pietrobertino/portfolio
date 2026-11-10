@@ -6,6 +6,8 @@ import LanguageGuard from "./components/LanguageGuard"
 import AboutPage from "./pages/AboutPage"
 import DefaultLayout from "./layouts/DefaultLayout"
 import { PageContextProvider } from "./contexts/PageContext"
+import ProjectsPage from "./pages/ProjectsPage"
+import ProjectPage from "./pages/ProjectPage"
 
 function App() {
 
@@ -18,6 +20,8 @@ function App() {
             <Route path="/:lang" element={<LanguageGuard />}>
               <Route element={<DefaultLayout />}>
                 <Route index element={<HomePage />} />
+                <Route path="/:lang/projects" element={<ProjectsPage />} />
+                <Route path="/:lang/projects/:slug" element={<ProjectPage />} />
                 <Route path="/:lang/about" element={<AboutPage />} />
               </Route>
             </Route>

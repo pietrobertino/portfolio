@@ -1,11 +1,13 @@
 import HeroSpace from "../components/HeroSpace"
-import ProjectsSection from "../components/ProjectsSection"
 import ServicesSection from "../components/ServicesSection"
 import ContactsSection from "../components/ContactsSection"
 import { useLanguage } from "../contexts/LanguageContext"
 import { useParams, useLocation } from "react-router-dom"
 import { useEffect } from "react"
 import { usePage } from "../contexts/PageContext"
+import WorkflowSection from "../components/WorkflowSection"
+import WhyMeSection from "../components/WhyMeSection"
+
 
 export default function HomePage() {
 
@@ -39,16 +41,11 @@ export default function HomePage() {
 
     return (
         <>
-
-
-
             <HeroSpace />
             <ServicesSection />
-            <ProjectsSection />
+            <WorkflowSection />
+            <WhyMeSection />
             <ContactsSection />
-
-
-
         </>
     )
 }

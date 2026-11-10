@@ -1,11 +1,12 @@
 const projects = [
     {
         id: 1,
-        img: 'booldog-screenshot.png',
+        slug: 'booldog',
+        img: '/projects/booldog-screenshot.png',
         title: 'Booldog E-Commerce',
         description: {
-            it: 'Negozio online dedicato alla vendita di prodotti per animali domestici, svolto in team. Ho implementato le pagine di ricerca dei prodotti, lavorando sia lato frontend sia backend, gestendo barra di ricerca, filtri ed ordinamento dei risultati.',
-            en: 'Online store dedicated to selling pet products, developed as a team project. I implemented the product search pages, working on both the frontend and backend, and handling the search bar, filters, and result sorting.'
+            it: 'E-commerce di prodotti per animali domestici, con un catalogo in cui i clienti trovano subito quello che cercano: barra di ricerca, filtri e ordinamento dei risultati. Ho curato l\'intera funzione di ricerca, dall\'interfaccia al server che elabora i risultati.',
+            en: 'Online store for pet products, with a catalog where customers find what they\'re looking for right away: search bar, filters and result sorting. I built the whole search feature, from the interface to the server that processes the results.'
         },
         link_github: 'https://github.com/pietrobertino/booldog',
         link_demo: 'https://booldog.vercel.app/'

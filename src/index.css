@@ -73,6 +73,10 @@ a:hover {
 .brand {
     font-weight: 700;
     font-size: 1.15rem;
+}
+
+.brand,
+.brand:focus {
     color: var(--text);
 }
 
@@ -86,6 +90,10 @@ a:hover {
 }
 
 .nav-link:hover {
+    color: var(--hover) !important;
+}
+
+.nav-link.active {
     color: var(--hover) !important;
 }
 

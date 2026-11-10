@@ -6,7 +6,7 @@ import Reveal from "./Reveal";
 export default function ProjectsSection() {
 
     const { t } = useLanguage();
-    const text = t.projects;
+    const text = t.home.projects;
 
     //prossimi progetti d aaggiungere: game night, progetto personale per il gestionale, tutti i lavori concreti a cui lavorerò
 

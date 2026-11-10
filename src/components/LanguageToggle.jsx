@@ -1,16 +1,24 @@
 import { useLanguage } from "../contexts/LanguageContext";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function LanguageToggle() {
 
     const navigate = useNavigate();
+    const location = useLocation();
+    console.log(location)
+
+    const path = location?.pathname.split('/');
 
     const { lang, setLang } = useLanguage();
 
     function toggle(selectedLang) {
         if (selectedLang != lang) {
-            setLang(selectedLang)
-            navigate(`/${selectedLang}`)
+            let endpoint = '';
+            for (let i = 0; i < path.length; i++) {
+                if (i !== 0 && i !== 1) endpoint += `/${path[i]}`;
+            }
+            setLang(selectedLang);
+            navigate(`/${selectedLang}${endpoint && `/${endpoint}`}`);
         }
     }
 
