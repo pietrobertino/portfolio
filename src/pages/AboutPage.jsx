@@ -23,12 +23,12 @@ export default function AboutPage() {
     return (
         <div className="container">
             <h1 className=" text-center my-5">{text.title}</h1>
-            <AboutLinks />
             <AboutIntro text={text.intro} />
+            <AboutStack />
             <AboutPath />
             <AboutWhatILike />
             <AboutOutsideCode />
-            <AboutStack />
+            <AboutLinks />
         </div>
     )
 }

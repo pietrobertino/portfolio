@@ -5,7 +5,6 @@ export default function LanguageToggle() {
 
     const navigate = useNavigate();
     const location = useLocation();
-    console.log(location)
 
     const path = location?.pathname.split('/');
 
