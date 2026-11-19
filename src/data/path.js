@@ -1,46 +1,55 @@
-
-const cards = [
+const path = [
     {
-        img: '',
-        title: 'Certificazione di inglese C2',
-        year: '2022',
-        type: 'Certificazione linguistica',
-        entity: 'Cambridge English',
-        p: 'Certificazione di inglese livello C2, che attesta una padronanza avanzata della lingua e mi permette di comunicare e lavorare efficacemente in contesti internazionali.'
+        id: 'boolean',
+        title: 'Corso di sviluppo web full stack',
+        org: 'Boolean Careers',
+        period: '',                       // es. '2025'
+        text: 'Percorso intensivo per diventare sviluppatore web, con progetti reali svolti in team.',
+        url: 'https://boolean.careers',
+        color: '#ff6b57',
+        logo: '',
     },
     {
-        img: '',
-        title: 'Programmazione e robotica industriale',
-        year: '2022',
-        type: 'Certificazione professionale',
-        entity: 'COMAU Academy',
-        p: 'Conseguimento del Patentino della Robotica presso COMAU Academy a Grugliasco, con formazione sull’uso e la programmazione di robot industriali.'
+        id: 'comau',
+        title: 'Corso di programmazione',
+        org: 'Comau',
+        period: '',
+        text: 'Il primo contatto strutturato con il mondo della programmazione.',
+        url: 'https://www.comau.com',
+        color: '#3aa0ff',
+        logo: '',
     },
     {
-        img: '',
-        title: 'Ingegneria elettronica',
-        year: '2022 – 2024',
-        type: 'Corso di laurea',
-        entity: 'Politecnico di Torino',
-        p: 'Percorso universitario durante il quale ho approfondito algoritmi e programmazione in C e Python. Tra gli esami sostenuti, 30 in Algoritmi e Programmazione e 30 e lode in Informatica. Studi non conclusi.'
+        id: 'ingegneria',
+        title: 'Studi in Ingegneria',
+        org: 'Università',               // scrivi il nome dell'ateneo
+        period: '',
+        text: 'Formazione tecnica e metodo analitico, che porto nel modo in cui affronto i problemi.',
+        url: '',                          // link all'ateneo
+        color: '#f4cd72',
+        logo: '',
     },
     {
-        img: '',
-        title: 'Master Full-Stack Web Developer',
-        year: 'Gennaio – Settembre 2026',
-        type: 'Master di formazione professionale',
-        entity: 'Boolean',
-        p: 'Percorso intensivo di oltre 700 ore incentrato sulla pratica quotidiana. Sviluppo di applicazioni web complete, affrontando l’intero ciclo di sviluppo dal frontend al backend, sia individualmente sia in team.'
+        id: 'inglese',
+        title: 'Certificazione di inglese',
+        org: 'Ente certificatore',        // es. Cambridge, IELTS...
+        period: '',
+        text: 'Inglese certificato, per lavorare con clienti e documentazione internazionali.',
+        url: '',
+        color: '#e5484d',
+        logo: '',
     },
     {
-        img: '',
-        title: 'Freelance Web Developer',
-        year: '2026 – Presente',
-        type: 'Attività professionale',
-        entity: 'Freelance',
-        p: 'Dalla formazione alla pratica professionale: sviluppo siti web e applicazioni, trasformando idee e necessità in soluzioni digitali funzionali, curate e accessibili.'
-    }
+        id: 'liceo',
+        title: 'Diploma di scuola superiore',
+        org: 'Il tuo istituto',
+        period: '',
+        text: 'Le basi scientifiche su cui ho costruito tutto il resto.',
+        url: '',
+        color: '#9B8CFF',
+        logo: '',
+    },
 ];
 
-export default cards;
+export default path;
 
